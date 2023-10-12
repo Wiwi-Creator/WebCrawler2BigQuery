@@ -1,428 +1,62 @@
 [
     {
-        "description": "購物車編號",
+        "description": "股票代號",
         "mode": "NULLABLE",
-        "name": "TGCode",
+        "name": "stock_no",
         "type": "STRING"
     },
     {
         "description": "主單編號",
         "mode": "NULLABLE",
-        "name": "TMCode",
+        "name": "traded_date",
         "type": "STRING"
     },
     {
         "description": "訂單編號",
         "mode": "NULLABLE",
-        "name": "TSCode",
+        "name": "traded_shares",
         "type": "STRING"
     },
     {
         "description": "付款方式",
         "mode": "NULLABLE",
-        "name": "OrderPayType",
+        "name": "traded_price",
         "type": "STRING"
     },
     {
         "description": "商店物流方式序號",
         "mode": "NULLABLE",
-        "name": "OrderShippingTypeId",
-        "type": "INTEGER"
+        "name": "opening_price",
+        "type": "STRING"
     },
     {
         "description": "配送方式",
         "mode": "NULLABLE",
-        "name": "OrderDeliverType",
+        "name": "high_price",
         "type": "STRING"
     },
     {
         "description": "通路商",
         "mode": "NULLABLE",
-        "name": "DistributorDef",
+        "name": "low_price",
         "type": "STRING"
     },
     {
         "description": "溫層類別",
         "mode": "NULLABLE",
-        "name": "TemperatureTypeDef",
+        "name": "closing_price",
         "type": "STRING"
     },
     {
         "description": "主單(TM)運費",
         "mode": "NULLABLE",
-        "name": "TMShippingFee",
+        "name": "gross_spread",
         "type": "STRING"
     },
     {
         "description": "訂單轉單日",
         "mode": "NULLABLE",
-        "name": "OrderDateTime",
-        "type": "DATETIME"
-    },
-    {
-        "description": "訂單狀態",
-        "mode": "NULLABLE",
-        "name": "OrderStatus",
-        "type": "STRING"
-    },
-    {
-        "description": "訂單狀態日",
-        "mode": "NULLABLE",
-        "name": "OrderStatusUpdatedDateTime",
-        "type": "DATETIME"
-    },
-    {
-        "description": "確認訂單日期時間",
-        "mode": "NULLABLE",
-        "name": "SalesOrderConfirmDateTime",
-        "type": "DATETIME"
-    },
-    {
-        "description": "訂單交期別",
-        "mode": "NULLABLE",
-        "name": "OrderShippingType",
-        "type": "STRING"
-    },
-    {
-        "description": "訂單預計出貨日",
-        "mode": "NULLABLE",
-        "name": "OrderExpectShippingDate",
-        "type": "DATETIME"
-    },
-    {
-        "description": "訂單來源平台",
-        "mode": "NULLABLE",
-        "name": "OrderSource",
-        "type": "STRING"
-    },
-    {
-        "description": "會員編號",
-        "mode": "NULLABLE",
-        "name": "MemberCode",
-        "type": "STRING"
-    },
-    {
-        "description": "Vip會員序號",
-        "mode": "NULLABLE",
-        "name": "VipMemberId",
-        "type": "INTEGER"
-    },
-    {
-        "description": "Vip會員編號",
-        "mode": "NULLABLE",
-        "name": "OuterMemberCode",
-        "type": "STRING"
-    },
-    {
-        "description": "收件人姓名",
-        "mode": "NULLABLE",
-        "name": "OrderReceiverName",
-        "type": "STRING"
-    },
-    {
-        "description": "收件人電話",
-        "mode": "NULLABLE",
-        "name": "OrderReceiverMobile",
-        "type": "STRING"
-    },
-    {
-        "description": "收件人郵遞區號",
-        "mode": "NULLABLE",
-        "name": "OrderReceiverZipCode",
-        "type": "STRING"
-    },
-    {
-        "description": "收件人地區/州/省份",
-        "mode": "NULLABLE",
-        "name": "OrderReceiverState",
-        "type": "STRING"
-    },
-    {
-        "description": "收件人縣市",
-        "mode": "NULLABLE",
-        "name": "OrderReceiverCity",
-        "type": "STRING"
-    },
-    {
-        "description": "收件人鄉鎮市區",
-        "mode": "NULLABLE",
-        "name": "OrderReceiverDistrict",
-        "type": "STRING"
-    },
-    {
-        "description": "收件人街道",
-        "mode": "NULLABLE",
-        "name": "OrderReceiverStreet",
-        "type": "STRING"
-    },
-    {
-        "description": "收件人地址",
-        "mode": "NULLABLE",
-        "name": "OrderReceiverAddress",
-        "type": "STRING"
-    },
-    {
-        "description": "超商取貨的門市編號",
-        "mode": "NULLABLE",
-        "name": "OrderReceiverStoreId",
-        "type": "STRING"
-    },
-    {
-        "description": "超商取貨的門市名稱",
-        "mode": "NULLABLE",
-        "name": "OrderReceiverStoreName",
-        "type": "STRING"
-    },
-    {
-        "description": "貨運單配送編號",
-        "mode": "NULLABLE",
-        "name": "ShippingOrderCode",
-        "type": "STRING"
-    },
-    {
-        "description": "貨運單備註",
-        "mode": "NULLABLE",
-        "name": "ShippingOrderNote",
-        "type": "STRING"
-    },
-    {
-        "description": "驗退原因說明",
-        "mode": "NULLABLE",
-        "name": "ShippingOrderSlaveStatusCasue",
-        "type": "STRING"
-    },
-    {
-        "description": "消費者備註",
-        "mode": "NULLABLE",
-        "name": "OrderMemo",
-        "type": "STRING"
-    },
-    {
-        "description": "廠商備註",
-        "mode": "NULLABLE",
-        "name": "OrderSupplierNote",
-        "type": "STRING"
-    },
-    {
-        "description": "商品選項序號",
-        "mode": "NULLABLE",
-        "name": "SkuId",
-        "type": "INTEGER"
-    },
-    {
-        "description": "商品選項名稱",
-        "mode": "NULLABLE",
-        "name": "SkuName",
-        "type": "STRING"
-    },
-    {
-        "description": "商品料號",
-        "mode": "NULLABLE",
-        "name": "OuterId",
-        "type": "STRING"
-    },
-    {
-        "description": "有無贈品",
-        "mode": "NULLABLE",
-        "name": "HasGift",
-        "type": "BOOLEAN"
-    },
-    {
-        "description": "商品單價",
-        "mode": "NULLABLE",
-        "name": "Price",
-        "type": "FLOAT"
-    },
-    {
-        "description": "商品數量",
-        "mode": "NULLABLE",
-        "name": "Qty",
-        "type": "INTEGER"
-    },
-    {
-        "description": "商品總金額(單價*數量)",
-        "mode": "NULLABLE",
-        "name": "TotalPrice",
-        "type": "FLOAT"
-    },
-    {
-        "description": "訂單總折扣金額",
-        "mode": "NULLABLE",
-        "name": "TotalDiscount",
-        "type": "FLOAT"
-    },
-    {
-        "description": "訂單實際付款金額",
-        "mode": "NULLABLE",
-        "name": "TotalPayment",
-        "type": "FLOAT"
-    },
-    {
-        "description": "折扣活動序號",
-        "mode": "REPEATED",
-        "name": "PromotionIdList",
-        "type": "INTEGER"
-    },
-    {
-        "description": "折扣活動折扣金額",
-        "mode": "NULLABLE",
-        "name": "PromotionDiscount",
-        "type": "FLOAT"
-    },
-    {
-        "description": "折價券序號",
-        "mode": "NULLABLE",
-        "name": "ECouponId",
-        "type": "INTEGER"
-    },
-    {
-        "description": "折價券折扣金額",
-        "mode": "NULLABLE",
-        "name": "ECouponDiscount",
-        "type": "FLOAT"
-    },
-    {
-        "description": "點數折抵金額",
-        "mode": "NULLABLE",
-        "name": "LoyaltyPointDiscount",
-        "type": "FLOAT"
-    },
-    {
-        "description": "折抵點數",
-        "mode": "NULLABLE",
-        "name": "LoyaltyPoint",
-        "type": "FLOAT"
-    },
-    {
-        "description": "商品屬性",
-        "mode": "NULLABLE",
-        "name": "ProductAttribute",
-        "type": "STRING"
-    },
-    {
-        "description": "商品贈品關連代碼",
-        "mode": "NULLABLE",
-        "name": "SalePageGiftGroupCode",
-        "type": "STRING"
-    },
-    {
-        "description": "溫層商品保留編號",
-        "mode": "NULLABLE",
-        "name": "TemperatureReservedNo",
-        "type": "STRING"
-    },
-    {
-        "description": "購買人全名",
-        "mode": "NULLABLE",
-        "name": "VipMemberFullName",
-        "type": "STRING"
-    },
-    {
-        "description": "取消原因",
-        "mode": "NULLABLE",
-        "name": "CancelOrderSlaveCauseDef",
-        "type": "STRING"
-    },
-    {
-        "description": "取消原因描述",
-        "mode": "NULLABLE",
-        "name": "CancelOrderSlaveCauseDefDesc",
-        "type": "STRING"
-    },
-    {
-        "description": "是否為加價購商品",
-        "mode": "NULLABLE",
-        "name": "IsExtra",
-        "type": "BOOLEAN"
-    },
-    {
-        "description": "收件人電話國碼",
-        "mode": "NULLABLE",
-        "name": "OrderReceiverCountryCode",
-        "type": "STRING"
-    },
-    {
-        "description": "收件國家/地區",
-        "mode": "NULLABLE",
-        "name": "OrderReceiverCountry",
-        "type": "STRING"
-    },
-    {
-        "description": "訂單推薦門市序號",
-        "mode": "NULLABLE",
-        "name": "RefereeLocationId",
-        "type": "INTEGER"
-    },
-    {
-        "description": "訂單推薦門市店號",
-        "mode": "NULLABLE",
-        "name": "RefereeLocationCode",
-        "type": "STRING"
-    },
-    {
-        "description": "訂單推薦門市名稱",
-        "mode": "NULLABLE",
-        "name": "RefereeLocationName",
-        "type": "STRING"
-    },
-    {
-        "description": "訂單推薦人店員序號",
-        "mode": "NULLABLE",
-        "name": "RefereeEmployeeId",
-        "type": "INTEGER"
-    },
-    {
-        "description": "訂單推薦人店員編號",
-        "mode": "NULLABLE",
-        "name": "RefereeEmployeeCode",
-        "type": "STRING"
-    },
-    {
-        "description": "訂單推薦人名稱",
-        "mode": "NULLABLE",
-        "name": "RefereeEmployeeName",
-        "type": "STRING"
-    },
-    {
-        "description": "商品是否可退貨",
-        "mode": "NULLABLE",
-        "name": "IsReturnable",
-        "type": "BOOLEAN"
-    },
-    {
-        "description": "指定到貨日期",
-        "mode": "NULLABLE",
-        "name": "BookingPickupDate",
-        "type": "DATETIME"
-    },
-    {
-        "description": "指定到貨時段",
-        "mode": "NULLABLE",
-        "name": "BookingPickupPeriod",
-        "type": "STRING"
-    },
-    {
-        "description": "贈品券活動序號",
-        "mode": "NULLABLE",
-        "name": "GiftECouponId",
-        "type": "INTEGER"
-    },
-    {
-        "description": null,
-        "mode": "NULLABLE",
-        "name": "Forwarder",
-        "type": "STRING"
-    },
-    {
-        "description": null,
-        "mode": "NULLABLE",
-        "name": "TSTotalWeight",
-        "type": "INTEGER"
-    },
-    {
-        "description": "商品名稱",
-        "mode": "NULLABLE",
-        "name": "Title",
+        "name": "trading_volume",
         "type": "STRING"
     }
 ]
