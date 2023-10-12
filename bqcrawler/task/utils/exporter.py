@@ -210,3 +210,7 @@ class BigqueryExporterBase:
             raise Exception(err)
         finally:
             self.drop_table(datasetID, temp_table_id)
+
+
+if __name__ == '__main__':
+    BigqueryExporterBase.__init__()

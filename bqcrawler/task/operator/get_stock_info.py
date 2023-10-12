@@ -1,8 +1,8 @@
 from datetime import datetime, timedelta
+from bqcrawer.task.utils.exporter import BigqueryExporterBase
 import requests
 from google.cloud import bigquery
 import json
-from task.utils.exporter import BigqueryExporterBase
 from pathlib import Path
 
 project_id = 'bishare-1606'
