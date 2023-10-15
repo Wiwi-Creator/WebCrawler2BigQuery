@@ -210,6 +210,21 @@ class BigqueryExporterBase:
             raise Exception(err)
         finally:
             self.drop_table(datasetID, temp_table_id)
+            
+    def streaming_insert(
+        self,
+        data,
+        datasetID: str,
+        tableID: str
+    ):
+        """ Insert Into a TABLE """
+        data_with_migo_frtch_time = self._add_migo_fetch_datetime(data)
+        table_ref = self.bq_client.dataset(datasetID).table(tableID)
+        error = self.bq_client.insert_rows_json(table_ref, data_with_migo_frtch_time)
+        if not error:
+            logging.info(f'Inserted {len(data)} referees detail into table {self.projectID}.{datasetID}.{tableID}')
+        else:
+            logging.info("Inserted Fail , Reason: ", error)
 
 
 if __name__ == '__main__':

@@ -13,7 +13,3 @@ class LitTaskValidator(object):
             company=company, brand=brand, brand_id=brand_id
         )
         logging.info(f"validate brand_id: {brand_id} related info complete")
-
-
-if __name__ == '__main__':
-    LitTaskValidator.validate_brand_info()
