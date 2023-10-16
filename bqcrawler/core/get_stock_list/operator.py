@@ -1,13 +1,12 @@
-from datetime import datetime, timedelta
 from google.cloud import bigquery
 
-class TaiwanStockList():
-    def __init__(self, projectID: str,dataset_id: str,table_id: str):
+class TaiwanStockList(object):
+    def __init__(self, projectID: str,datasetID: str,tableID: str):
         self.projectID = projectID
-        self.dataset_id = dataset_id
-        self.table_id = table_id
+        self.datasetID = datasetID
+        self.tableID = tableID
     def get_stock_list(self):
         bq_client = bigquery.Client(project=self.projectID)
-        query_job = bq_client.query(f"""SELECT DISTINCT stock_no FROM `{self.projectID}.{self.dataset_id}.{self.table_id}`""")
+        query_job = bq_client.query(f"""SELECT DISTINCT stock_no FROM `{self.projectID}.{self.datasetID}.{self.tableID}`""")
         stock_no = [row['stock_no'] for row in query_job]
         return stock_no
