@@ -1,0 +1,8 @@
+_export:
+    column: 'PageNumber,ISIN,Stock_no,StockName,MarketType,StockType,Industry,IssueDate,CFICode,Remarks'
+    gcs_path: gs://wiwi_test/project/stock_list.csv
+
++load_csv_to_bigquery:
+    sh>: bq load --project_id bishare-1606 --source_format=CSV --replace --skip_leading_rows=1 --schema ${column}
+         wiwi_test.taiwan_stock_list
+         ${gcs_path}
