@@ -1,5 +1,5 @@
-from task.utils.exporter import BigqueryExporterBase
-from task.operator.PTTStockTitle import PTTStockTitle
+from bqcrawler.task.utils.exporter import BigqueryExporterBase
+from bqcrawler.task.operator.PTTStockTitle import PTTStockTitle
 import logging
 
 
