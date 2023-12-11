@@ -6,37 +6,37 @@
         "type": "STRING"
     },
     {
-        "description": "主單編號",
+        "description": "成交日期",
         "mode": "NULLABLE",
         "name": "traded_date",
         "type": "STRING"
     },
     {
-        "description": "訂單編號",
+        "description": "股數",
         "mode": "NULLABLE",
         "name": "traded_shares",
         "type": "STRING"
     },
     {
-        "description": "付款方式",
+        "description": "交易價格",
         "mode": "NULLABLE",
         "name": "traded_price",
         "type": "STRING"
     },
     {
-        "description": "商店物流方式序號",
+        "description": "開盤價",
         "mode": "NULLABLE",
         "name": "opening_price",
         "type": "STRING"
     },
     {
-        "description": "配送方式",
+        "description": "最高價",
         "mode": "NULLABLE",
         "name": "high_price",
         "type": "STRING"
     },
     {
-        "description": "通路商",
+        "description": "最低價",
         "mode": "NULLABLE",
         "name": "low_price",
         "type": "STRING"

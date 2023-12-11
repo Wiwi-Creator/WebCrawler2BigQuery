@@ -2,11 +2,11 @@ import requests
 import json
 
 
-class TaiwanStockInfo(object):
+class TWSEOperator(object):
     def __init__(self, stock_no: str, data_date):
         self.stock_no = stock_no
         self.data_date = data_date
-
+        
     def get_stock_info(self):
         url_date = self.data_date.strftime('%Y%m%d')
         ch_data_date = f"{(self.data_date.year - 1911)}/{self.data_date.strftime('%m/%d')}"

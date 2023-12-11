@@ -1,6 +1,6 @@
-from core.bigquery.operator import BigQueryOperator
-from task.operator.TWSEStockInfo import TWSEStockInfo
-from task.utils.exporter import BigqueryExporterBase
+from bqcrawler.core.bigquery.operator import BigQueryOperator
+from bqcrawler.core.TWSE.operator import TWSEOperator
+from bqcrawler.core.utils.exporter import BigqueryExporterBase
 import logging
 from datetime import datetime
 
@@ -25,10 +25,15 @@ class WebCrawlerOperator():
                                          tableID='taiwan_stock_list')
             stock_no = list_task.get_stock_list()
             logging.info("Get stock_info from TW-Stock")
-            info_task = TWSEStockInfo(stock_no, data_datetime)
-            stock_info = info_task.get_stock_info()
+            info_task = TWSEOperator(stock_no, data_datetime)
+            if stock_no:
+                stock_info = info_task.get_stock_info()
+            else:
+                raise Exception("There's No Stock_No From TW-Stock!")
+            
         except Exception as e:
             raise Exception(e)
+        
         finally:
             exporter = BigqueryExporterBase(projectID=projectID)
             if stock_info is not None:
